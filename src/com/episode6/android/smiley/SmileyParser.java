@@ -40,6 +40,11 @@ public class SmileyParser {
     	if (sInstance == null)
     		sInstance = new SmileyParser(context);
     }
+    public static void destroyInstance() {
+        if (sInstance != null) {
+            sInstance = null;
+        }
+    }
 
     private final Context mContext;
     private final String[] mSmileyTexts;
